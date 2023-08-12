@@ -152,6 +152,9 @@ class Logic(QMainWindow, Ui_MainWindow):
             raw = self.text_values.toPlainText().strip()
             if raw == '':
                 raise IndexError
+            else:
+                raw = raw.split(',')
+            
             values = []
             for value in raw:
                 values.append(get_decimal_fraction(value))
@@ -178,13 +181,14 @@ class Logic(QMainWindow, Ui_MainWindow):
             else:
                 values = get_two_values()
         except ValueError:
-            self.set_answer_text("Input must only contain numbers!")
+            self.set_answer_text("Input must contain only numbers!")
             return
         except TypeError:
             self.set_answer_text("All input boxes must contain a number!")
             return
         except IndexError:
             self.set_answer_text("The input box must contain a number!")
+            return
         
         # Run operation
         answer = None
