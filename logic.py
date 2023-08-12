@@ -193,9 +193,15 @@ class Logic(QMainWindow, Ui_MainWindow):
             case self.radio_multiply:
                 answer = f.multiply(values)
             case self.radio_divide:
-                answer = f.divide(values)
+                try:
+                    answer = f.divide(values)
+                except ZeroDivisionError:
+                    answer = "Cannot Divide by Zero"
             case self.radio_modulo:
-                answer = f.modulo(values)
+                try:
+                    answer = f.modulo(values)
+                except ZeroDivisionError:
+                    answer = "Cannot Divide by Zero"
             case self.radio_root:
                 answer = f.exponent(values)
             case None:
