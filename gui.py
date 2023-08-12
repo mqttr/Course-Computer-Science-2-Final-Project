@@ -1,0 +1,152 @@
+# -*- coding: utf-8 -*-
+
+################################################################################
+## Form generated from reading UI file 'guiyioBrd.ui'
+##
+## Created by: Qt User Interface Compiler version 6.4.3
+##
+## WARNING! All changes made in this file will be lost when recompiling UI file!
+################################################################################
+
+from PyQt6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
+    QMetaObject, QObject, QPoint, QRect,
+    QSize, QTime, QUrl, Qt)
+from PyQt6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
+    QFont, QFontDatabase, QGradient, QIcon,
+    QImage, QKeySequence, QLinearGradient, QPainter,
+    QPalette, QPixmap, QRadialGradient, QTransform)
+from PyQt6.QtWidgets import (QApplication, QButtonGroup, QCheckBox, QFrame,
+    QGroupBox, QLabel, QLineEdit, QMainWindow,
+    QPushButton, QRadioButton, QSizePolicy, QTextEdit,
+    QWidget)
+
+class Ui_MainWindow(object):
+    def setupUi(self, MainWindow):
+        if not MainWindow.objectName():
+            MainWindow.setObjectName(u"MainWindow")
+        MainWindow.resize(380, 420)
+        MainWindow.setMinimumSize(QSize(380, 420))
+        MainWindow.setMaximumSize(QSize(380, 420))
+        self.centralwidget = QWidget(MainWindow)
+        self.centralwidget.setObjectName(u"centralwidget")
+        self.box_operator = QGroupBox(self.centralwidget)
+        self.box_operator.setObjectName(u"box_operator")
+        self.box_operator.setGeometry(QRect(10, 10, 351, 131))
+        self.label_title_operation = QLabel(self.box_operator)
+        self.label_title_operation.setObjectName(u"label_title_operation")
+        self.label_title_operation.setGeometry(QRect(10, 10, 81, 21))
+        self.frame_operator_button = QFrame(self.box_operator)
+        self.frame_operator_button.setObjectName(u"frame_operator_button")
+        self.frame_operator_button.setEnabled(True)
+        self.frame_operator_button.setGeometry(QRect(20, 40, 311, 81))
+        self.radio_add = QRadioButton(self.frame_operator_button)
+        self.group_operator = QButtonGroup(MainWindow)
+        self.group_operator.setObjectName(u"group_operator")
+        self.group_operator.addButton(self.radio_add)
+        self.radio_add.setObjectName(u"radio_add")
+        self.radio_add.setGeometry(QRect(50, 10, 89, 20))
+        self.radio_multiply = QRadioButton(self.frame_operator_button)
+        self.group_operator.addButton(self.radio_multiply)
+        self.radio_multiply.setObjectName(u"radio_multiply")
+        self.radio_multiply.setGeometry(QRect(50, 30, 89, 20))
+        self.radio_subtract = QRadioButton(self.frame_operator_button)
+        self.group_operator.addButton(self.radio_subtract)
+        self.radio_subtract.setObjectName(u"radio_subtract")
+        self.radio_subtract.setGeometry(QRect(50, 50, 89, 20))
+        self.radio_divide = QRadioButton(self.frame_operator_button)
+        self.group_operator.addButton(self.radio_divide)
+        self.radio_divide.setObjectName(u"radio_divide")
+        self.radio_divide.setGeometry(QRect(180, 10, 89, 20))
+        self.radio_modulo = QRadioButton(self.frame_operator_button)
+        self.group_operator.addButton(self.radio_modulo)
+        self.radio_modulo.setObjectName(u"radio_modulo")
+        self.radio_modulo.setGeometry(QRect(180, 30, 89, 20))
+        self.radio_root = QRadioButton(self.frame_operator_button)
+        self.group_operator.addButton(self.radio_root)
+        self.radio_root.setObjectName(u"radio_root")
+        self.radio_root.setGeometry(QRect(180, 50, 89, 20))
+        self.group_value = QGroupBox(self.centralwidget)
+        self.group_value.setObjectName(u"group_value")
+        self.group_value.setGeometry(QRect(10, 150, 351, 141))
+        self.label_title_values = QLabel(self.group_value)
+        self.label_title_values.setObjectName(u"label_title_values")
+        self.label_title_values.setGeometry(QRect(10, 10, 61, 21))
+        self.check_extra_values = QCheckBox(self.group_value)
+        self.check_extra_values.setObjectName(u"check_extra_values")
+        self.check_extra_values.setGeometry(QRect(80, 10, 121, 20))
+        self.frame_two_values = QFrame(self.group_value)
+        self.frame_two_values.setObjectName(u"frame_two_values")
+        self.frame_two_values.setGeometry(QRect(20, 40, 311, 91))
+        self.line_value_1 = QLineEdit(self.frame_two_values)
+        self.line_value_1.setObjectName(u"line_value_1")
+        self.line_value_1.setGeometry(QRect(90, 10, 191, 22))
+        self.line_value_2 = QLineEdit(self.frame_two_values)
+        self.line_value_2.setObjectName(u"line_value_2")
+        self.line_value_2.setGeometry(QRect(90, 50, 191, 22))
+        self.label_value_1 = QLabel(self.frame_two_values)
+        self.label_value_1.setObjectName(u"label_value_1")
+        self.label_value_1.setGeometry(QRect(9, 14, 71, 20))
+        self.label_value_2 = QLabel(self.frame_two_values)
+        self.label_value_2.setObjectName(u"label_value_2")
+        self.label_value_2.setGeometry(QRect(10, 51, 71, 20))
+        self.frame_extra_values = QFrame(self.group_value)
+        self.frame_extra_values.setObjectName(u"frame_extra_values")
+        self.frame_extra_values.setEnabled(True)
+        self.frame_extra_values.setGeometry(QRect(20, 40, 311, 91))
+        self.text_values = QTextEdit(self.frame_extra_values)
+        self.text_values.setObjectName(u"text_values")
+        self.text_values.setGeometry(QRect(10, 10, 291, 41))
+        self.label_extra_values_disclaimer = QLabel(self.frame_extra_values)
+        self.label_extra_values_disclaimer.setObjectName(u"label_extra_values_disclaimer")
+        self.label_extra_values_disclaimer.setGeometry(QRect(20, 60, 271, 16))
+        self.button_clear_cache = QPushButton(self.group_value)
+        self.button_clear_cache.setObjectName(u"button_clear_cache")
+        self.button_clear_cache.setGeometry(QRect(210, 10, 121, 24))
+        self.frame_extra_values.raise_()
+        self.label_title_values.raise_()
+        self.check_extra_values.raise_()
+        self.frame_two_values.raise_()
+        self.button_clear_cache.raise_()
+        self.group_answer = QGroupBox(self.centralwidget)
+        self.group_answer.setObjectName(u"group_answer")
+        self.group_answer.setGeometry(QRect(10, 300, 341, 111))
+        self.label_title_answer = QLabel(self.group_answer)
+        self.label_title_answer.setObjectName(u"label_title_answer")
+        self.label_title_answer.setGeometry(QRect(140, 0, 81, 21))
+        self.label_answer = QLabel(self.group_answer)
+        self.label_answer.setObjectName(u"label_answer")
+        self.label_answer.setGeometry(QRect(30, 30, 301, 31))
+        self.button_calculate = QPushButton(self.group_answer)
+        self.button_calculate.setObjectName(u"button_calculate")
+        self.button_calculate.setGeometry(QRect(100, 70, 161, 31))
+        MainWindow.setCentralWidget(self.centralwidget)
+        self.group_answer.raise_()
+        self.box_operator.raise_()
+        self.group_value.raise_()
+
+        self.retranslateUi(MainWindow)
+
+        QMetaObject.connectSlotsByName(MainWindow)
+    # setupUi
+
+    def retranslateUi(self, MainWindow):
+        MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"Matthew Roland - Final Project - Lab 3", None))
+        self.label_title_operation.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><span style=\" font-size:12pt; font-weight:700;\">Operation</span></p></body></html>", None))
+        self.radio_add.setText(QCoreApplication.translate("MainWindow", u"Add", None))
+        self.radio_multiply.setText(QCoreApplication.translate("MainWindow", u"Multiply", None))
+        self.radio_subtract.setText(QCoreApplication.translate("MainWindow", u"Subtract", None))
+        self.radio_divide.setText(QCoreApplication.translate("MainWindow", u"Divide", None))
+        self.radio_modulo.setText(QCoreApplication.translate("MainWindow", u"Modulo", None))
+        self.radio_root.setText(QCoreApplication.translate("MainWindow", u"Exponents", None))
+        self.label_title_values.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><span style=\" font-size:12pt; font-weight:700;\">Values</span></p></body></html>", None))
+        self.check_extra_values.setText(QCoreApplication.translate("MainWindow", u"Mutli-Value Input", None))
+        self.label_value_1.setText(QCoreApplication.translate("MainWindow", u"Value 1", None))
+        self.label_value_2.setText(QCoreApplication.translate("MainWindow", u"Value 2", None))
+        self.label_extra_values_disclaimer.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><span style=\" font-size:10pt;\">Separate all values with &quot; , &quot;</span></p></body></html>", None))
+        self.button_clear_cache.setText(QCoreApplication.translate("MainWindow", u"Clear Cache", None))
+        self.group_answer.setTitle("")
+        self.label_title_answer.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><span style=\" font-size:14pt; font-weight:700;\">Answer</span></p></body></html>", None))
+        self.label_answer.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><span style=\" font-size:12pt;\"><br/></span></p></body></html>", None))
+        self.button_calculate.setText(QCoreApplication.translate("MainWindow", u"Calculate", None))
+    # retranslateUi
+
