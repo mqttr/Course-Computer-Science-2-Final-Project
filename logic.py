@@ -32,7 +32,8 @@ class Logic(QMainWindow, Ui_MainWindow):
         }
 
         # Initial Hiding
-        self.update_module_visibility()
+        self.refresh_all_ui_elements()
+
 
         # Control Mappings
         self.check_extra_values.clicked.connect(lambda: self.click_check_extra_values())
@@ -45,7 +46,7 @@ class Logic(QMainWindow, Ui_MainWindow):
         Master action on Click of check_extra_values checkbox; Updates cache and updates module visibility.
         '''
         self.update_cache(self.group_operator.checkedButton())
-        self.update_module_visibility()
+        self.refresh_all_ui_elements()
 
     def update_module_visibility(self) -> None:
         '''
