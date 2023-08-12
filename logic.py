@@ -230,7 +230,6 @@ class Logic(QMainWindow, Ui_MainWindow):
         self.refresh_all_ui_elements()
 
         self.__lastOperator = self.group_operator.checkedButton()
-        print(self.__cache)
 
     def refresh_all_ui_elements(self) -> None:
         '''
