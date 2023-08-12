@@ -19,7 +19,7 @@ class Logic(QMainWindow, Ui_MainWindow):
             self.radio_modulo:      [ "", "", "", False ],
             self.radio_subtract:    [ "", "", "", False ],
             self.radio_root:        [ "", "", "", False ],
-            None:                   ["","","", False]
+            None:                   [ "", "", "", False]
         }
         self.__operator_display_settings = {
             self.radio_add:         [ "Value 1"   , "Value 2"  ,  True ],
@@ -104,7 +104,7 @@ class Logic(QMainWindow, Ui_MainWindow):
         '''
         Method grabs display settings to set the availability of extra value input when using some operations.
         '''
-        def enable_check_extra_values(option: bool):
+        def enable_check_extra_values(option: bool) -> None:
             '''
             Toggles the availability of check_extra_values
             :param option: True/False Availability of check_extra_values
@@ -113,7 +113,7 @@ class Logic(QMainWindow, Ui_MainWindow):
             if option:
                 self.check_extra_values.setToolTip("")
             else:
-                self.check_extra_values.setToolTip("This has been disabled due to it not making sense with the selected operation.")
+                self.check_extra_values.setToolTip("This option has been disabled.")
 
         operation = self.group_operator.checkedButton()
         self.label_value_1.setText(self.__operator_display_settings[operation][0])
@@ -221,7 +221,7 @@ class Logic(QMainWindow, Ui_MainWindow):
 
         self.set_answer_text(str(answer))
 
-    def click_operation(self):
+    def click_operation(self) -> None:
         '''
         Main method when an operation checkbox is clicked.
         '''
@@ -233,7 +233,7 @@ class Logic(QMainWindow, Ui_MainWindow):
 
     def refresh_all_ui_elements(self) -> None:
         '''
-        Main refresh all UI elements
+        Main refresh for all UI elements
         '''
         self.check_extra_values.setChecked(self.__cache[self.group_operator.checkedButton()][3])
         self.set_answer_text("")
@@ -259,12 +259,8 @@ class Logic(QMainWindow, Ui_MainWindow):
             self.radio_modulo:      [ "", "", "", False ],
             self.radio_subtract:    [ "", "", "", False ],
             self.radio_root:        [ "", "", "", False ],
-            None:                   [ "","","", False]
+            None:                   [ "", "", "", False]
         }
-
-        self.line_value_1.setText(self.__cache[self.group_operator.checkedButton()][0])
-        self.line_value_2.setText(self.__cache[self.group_operator.checkedButton()][1])
-        self.text_values.setText(self.__cache[self.group_operator.checkedButton()][2])
 
         self.refresh_all_ui_elements()
 
@@ -273,7 +269,7 @@ class Logic(QMainWindow, Ui_MainWindow):
         Sets the answer text box with proper formating.
         :param text: Text to be displayed on the answer spot.
         '''
-        self.label_answer.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><span style=\" font-size:12pt;\">" + str(text) + "<br/></span></p></body></html>", None))
+        self.label_answer.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><span style=\" font-size:12pt;\">" + text + "<br/></span></p></body></html>", None))
 
 if __name__ == "__main__":
     import main
