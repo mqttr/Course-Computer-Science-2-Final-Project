@@ -144,19 +144,20 @@ class Logic(QMainWindow, Ui_MainWindow):
             else:
                 return float(text)
 
-        def get_extra_values(self) -> list[float]:
+        def get_extra_values() -> list[float]:
             '''
             Gets a list of all the float values of the input in extra values input box
             :return: list[float] of the values in the extra values input box
             '''
-            raw = self.text_values.toPlainText().split(',')
-
+            raw = self.text_values.toPlainText().strip()
+            if raw == '':
+                raise IndexError
             values = []
             for value in raw:
                 values.append(get_decimal_fraction(value))
             return values
 
-        def get_two_values(self) -> list[float]:
+        def get_two_values() -> list[float]:
             '''
             Gets a list of all the float values of the input in two values input box
             :return: list[float] of the values in the two values input box
@@ -173,15 +174,17 @@ class Logic(QMainWindow, Ui_MainWindow):
         list[float]: values
         try:
             if self.check_extra_values.isChecked():
-                values = get_extra_values(self)
+                values = get_extra_values()
             else:
-                values = get_two_values(self)
+                values = get_two_values()
         except ValueError:
             self.set_answer_text("Input must only contain numbers!")
             return
         except TypeError:
-            self.set_answer_text("All input boxes must contain a value!")
+            self.set_answer_text("All input boxes must contain a number!")
             return
+        except IndexError:
+            self.set_answer_text("The input box must contain a number!")
         
         # Run operation
         answer = None
