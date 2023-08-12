@@ -38,7 +38,7 @@ class Logic(QMainWindow, Ui_MainWindow):
         # Control Mappings
         self.check_extra_values.clicked.connect(lambda: self.click_check_extra_values())
         self.button_calculate.clicked.connect(lambda: self.click_calculate())
-        self.group_operator.buttonClicked.connect(lambda: self.refresh_all_ui_elements())
+        self.group_operator.buttonClicked.connect(lambda: self.click_operation())
         self.button_clear_cache.clicked.connect(lambda: self.cache_clear())
 
     def click_check_extra_values(self) -> None:
@@ -230,6 +230,7 @@ class Logic(QMainWindow, Ui_MainWindow):
         self.refresh_all_ui_elements()
 
         self.__lastOperator = self.group_operator.checkedButton()
+        print(self.__cache)
 
     def refresh_all_ui_elements(self) -> None:
         '''
